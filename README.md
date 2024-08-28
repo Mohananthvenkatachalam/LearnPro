@@ -1,6 +1,6 @@
 # LearnPro
 
-Welcome to CollegePro! It is a web application that is designed to help students in college. It is a platform where students can share notes, ask questions, and help each other out. It is a great way to collaborate with other students and learn from each other.
+Welcome to LearnPro! It is a web application that is designed to help students in college. It is a platform where students can share notes, ask questions, and help each other out. It is a great way to collaborate with other students and learn from each other.
 
 ## Table of Content
 
