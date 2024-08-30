@@ -41,6 +41,10 @@ export const userRoutes: RouteObject[] = [
     Component: React.lazy(() => import('@/pages/user/ResumeAnalysis')),
   },
   {
+    path: '/module/primary',
+    Component: React.lazy(() => import('@/pages/user/Module')),
+  },
+  {
     path: '/take-test',
     Component: React.lazy(() => import('@/pages/user/TakeTest')),
   },

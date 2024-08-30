@@ -1,9 +1,8 @@
 import { levels } from '@/constants/moduleData'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Module from './Module'
 
-const UserCoursePage = () => {
+const EducationCard = () => {
   return (
     <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       {levels.map((level, key) => (
@@ -47,4 +46,4 @@ const UserCoursePage = () => {
   )
 }
 
-export default UserCoursePage
+export default EducationCard
