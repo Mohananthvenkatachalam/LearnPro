@@ -6,19 +6,17 @@ import {
   Globe,
   User,
   Cake,
-  Twitter,
-  Linkedin,
   Camera,
   Calendar,
   Home,
   University,
-  Github,
   Eye,
   Check,
   Handshake,
   MessageCircle,
   Star,
-  ClipboardList,
+  ClipboardList, BookOpen, Lightbulb, Heart, Award
+  
 } from 'lucide-react'
 import {
   Card,
@@ -43,28 +41,28 @@ function UserProfile() {
   const { user } = useAuth()
 
   const items = [
-    { language: 'Java', solved: 100 },
-    { language: 'React', solved: 80 },
-    { language: 'Javascript', solved: 27 },
-    { language: 'Python', solved: 50 },
-    { language: 'MangoDB', solved: 30 },
+    { language: 'Physics', solved: 100 },
+    { language: 'Chemistry', solved: 80 },
+    { language: 'Botany', solved: 27 },
+    { language: 'Zoology', solved: 50 },
+    { language: 'Environmental Science', solved: 30 },
   ]
 
   const submissions = [
-    { name: 'Introduction to Programming', date: '2 days ago' },
-    { name: 'Data Structures and Algorithms', date: '7 days ago' },
-    { name: 'Web Development Fundamentals', date: '14 days ago' },
-    { name: 'Machine Learning Basics', date: '21 days ago' },
-    { name: 'Advanced JavaScript', date: '28 days ago' },
-    { name: 'Database Management Systems', date: '35 days ago' },
-    { name: 'Network Security', date: '42 days ago' },
-    { name: 'Cloud Computing', date: '49 days ago' },
-    { name: 'Software Engineering Principles', date: '56 days ago' },
-    { name: 'Artificial Intelligence', date: '63 days ago' },
-    { name: 'Human-Computer Interaction', date: '70 days ago' },
-    { name: 'Operating Systems', date: '77 days ago' },
-    { name: 'Computer Networks', date: '84 days ago' },
-    { name: 'Discrete Mathematics', date: '91 days ago' },
+    { name: 'Force and Laws of Motion', date: '2 days ago' },
+    { name: 'Work, Energy, and Power', date: '7 days ago' },
+    { name: 'Light: Reflection and Refraction', date: '14 days ago' },
+    { name: 'Electricity', date: '21 days ago' },
+    { name: 'Magnetic Effects of Electric Current', date: '28 days ago' },
+    { name: 'Chemical Reactions and Equations', date: '35 days ago' },
+    { name: 'Acids, Bases, and Salts', date: '42 days ago' },
+    { name: 'Metals and Non-metals', date: '49 days ago' },
+    { name: 'Carbon and its Compounds', date: '56 days ago' },
+    { name: 'Periodic Classification of Elements', date: '63 days ago' },
+    { name: 'Life Processes', date: '70 days ago' },
+    { name: 'Control and Coordination', date: '77 days ago' },
+    { name: 'Reproduction', date: '84 days ago' },
+    { name: 'Heredity and Evolution', date: '91 days ago' },
   ]
 
   const totEc = 814
@@ -107,7 +105,7 @@ function UserProfile() {
               </div>
             </div>
             <p className='mt-4 text-lg'>
-              ~ A passionate programmer who Likes to do Full stack Projects
+            ~ I love exploring the world of science!
             </p>
             <Button variant='default' className='mt-4 w-full'>
               Edit Profile
@@ -120,26 +118,24 @@ function UserProfile() {
               <div className='flex items-center gap-3 pt-5'>
                 <University className='text-gray-600' />
                 <p className='max-w-full overflow-hidden text-ellipsis'>
-                  Sri Krishna College Of Engineering and Technology
+                  Sri Shakthi Matriculation Higher Secondary School
                 </p>
               </div>
               <div className='flex items-center gap-3 pt-5'>
-                <Linkedin className='text-gray-600' />
-                <a href='https://linkedin.com/in/johndoe' target='_blank' rel='noopener noreferrer'>
-                  linkedin.com/in/priyanshu_T
-                </a>
+                <BookOpen className='text-gray-600' />
+                <span>10th Grade</span>
               </div>
               <div className='flex items-center gap-3 pt-5'>
-                <Globe className='text-gray-600' />
-                <a href='https://google.com' target='_blank' rel='noopener noreferrer'>
-                  priyanshuofficial.github.io
-                </a>
+                <Lightbulb className='text-gray-600' />
+                <span>Favorite Subject: Science</span>
               </div>
               <div className='flex items-center gap-3 pt-5'>
-                <Github className='text-gray-600' />
-                <a href='https://google.com' target='_blank' rel='noopener noreferrer'>
-                  priyanshu.github.io
-                </a>
+                <Heart className='text-gray-600' />
+                <span>Hobbies: Painting, Playing Basketball</span>
+              </div>
+              <div className='flex items-center gap-3 pt-5'>
+                <Award className='text-gray-600' />
+                <span>Achievements: Science Fair Winner 2023</span>
               </div>
             </div>
             <div className='mt-5 border-b border-b-gray-500 pb-7'>
@@ -239,19 +235,19 @@ function UserProfile() {
             <div className='flex gap-2'>
               <Check className='text-cyan-500' />
               <p className='font-semibold'>
-                Total Problems solved : <span className='text-blue-600'>283 </span>
+                Total Lessons solved : <span className='text-blue-600'>28 </span>
               </p>
             </div>
             <div className='flex gap-2 pt-8'>
               <Check className='text-cyan-500' />
               <p className='font-semibold'>
-                Total MCQ Attended : <span className='text-blue-600'>156 </span>
+                Total MCQ Attended : <span className='text-blue-600'>57 </span>
               </p>
             </div>
             <div className='flex gap-2 pt-8'>
               <Check className='text-cyan-500' />
               <p className='font-semibold'>
-                Total Projects Uploaded :<span className='text-blue-600'>07 </span>
+                Total Lessons Revised :<span className='text-blue-600'>07 </span>
               </p>
             </div>
           </Card>

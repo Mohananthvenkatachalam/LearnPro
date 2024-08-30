@@ -88,7 +88,7 @@ export default function AdminDashboard() {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <div className='py-2 font-medium'>Full Stack Java Developer</div>
+                      <div className='py-2 font-medium'>Physics</div>
                     </TableCell>
                     <TableCell className='hidden xl:table-column'>Sale</TableCell>
                     <TableCell className='hidden xl:table-column'>
@@ -103,7 +103,7 @@ export default function AdminDashboard() {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <div className='py-2 font-medium'>React Native</div>
+                      <div className='py-2 font-medium'>Chemistry</div>
                     </TableCell>
                     <TableCell className='hidden xl:table-column'>Refund</TableCell>
                     <TableCell className='hidden xl:table-column'>
@@ -118,7 +118,7 @@ export default function AdminDashboard() {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <div className='py-2 font-medium'>MangoDB</div>
+                      <div className='py-2 font-medium'>Botany</div>
                     </TableCell>
                     <TableCell className='hidden xl:table-column'>Subscription</TableCell>
                     <TableCell className='hidden xl:table-column'>
@@ -133,7 +133,7 @@ export default function AdminDashboard() {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <div className='py-2 font-medium'>Java Springboot</div>
+                      <div className='py-2 font-medium'>Zoology</div>
                     </TableCell>
                     <TableCell className='hidden xl:table-column'>Sale</TableCell>
                     <TableCell className='hidden xl:table-column'>
@@ -148,7 +148,7 @@ export default function AdminDashboard() {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <div className='py-2 font-medium'>Web Development</div>
+                      <div className='py-2 font-medium'>Environmental Science</div>
                     </TableCell>
                     <TableCell className='hidden xl:table-column'>Sale</TableCell>
                     <TableCell className='hidden xl:table-column'>
