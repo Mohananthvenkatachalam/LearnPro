@@ -15,12 +15,12 @@ export default function Dashboard() {
         <Tabs defaultValue='home'>
           <TabsList className='mb-6'>
             <TabsTrigger value='home'>Home</TabsTrigger>
-            <TabsTrigger value='course'>Courses</TabsTrigger>
+            <TabsTrigger value='course'>Modules</TabsTrigger>
             <TabsTrigger value='performance'>Performance</TabsTrigger>
-            <TabsTrigger value='hackathons'>Hackathons</TabsTrigger>
-            <TabsTrigger value='mcq'>MCQ</TabsTrigger>
+            <TabsTrigger value='hackathons'>Competition</TabsTrigger>
+            <TabsTrigger value='mcq'>Test</TabsTrigger>
             <TabsTrigger value='profile'>Profile</TabsTrigger>
-            <TabsTrigger value='resume'>Resume Analysis</TabsTrigger>
+            <TabsTrigger value='resume'>Skill Analysis</TabsTrigger>
             <TabsTrigger value='settings'>Settings</TabsTrigger>
           </TabsList>
 

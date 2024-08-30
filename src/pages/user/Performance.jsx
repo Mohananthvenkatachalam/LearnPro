@@ -4,9 +4,7 @@ import { faker } from '@faker-js/faker'
 import { Button } from '@/components/ui/button'
 import {
   Card,
-  CardFooter,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
@@ -15,31 +13,31 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const Status = [
   {
-    course: 'Learn-React',
+    course: 'Fundamentals-Of-optics',
     owner: 'mohanV@gmail.com',
   },
   {
-    course: 'Learn-React',
+    course: 'Organic-Chemistry',
     owner: 'mohanV@gmail.com',
     percentage: '50',
   },
   {
-    course: 'Master-Angular',
+    course: 'parts-of-speech',
     owner: 'susanB@gmail.com',
     percentage: '60',
   },
   {
-    course: 'VueJS-Essentials',
+    course: 'Computer-Science',
     owner: 'davidK@gmail.com',
     percentage: '75',
   },
   {
-    course: 'NodeJS-Fundamentals',
+    course: 'Fiber-Optics',
     owner: 'janeD@gmail.com',
     percentage: '25',
   },
   {
-    course: 'Python-For-Beginners',
+    course: 'Python',
     owner: 'alexT@gmail.com',
     percentage: '95',
   },
@@ -48,61 +46,61 @@ const Status = [
 const TopScorers = [
   {
     rank: 1,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Layaranjith M',
     points: '195',
   },
   {
     rank: 2,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Kavin S',
     points: '190',
   },
   {
     rank: 3,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Praveen T',
     points: '187',
   },
   {
     rank: 4,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Abshiek S',
     points: '183',
   },
   {
     rank: 5,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Priyanshu T',
     points: '178',
   },
   {
     rank: 6,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Mohan V',
     points: '172',
   },
   {
     rank: 7,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Aswanth S',
     points: '163',
   },
   {
     rank: 8,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Nethish M',
     points: '159',
   },
   {
     rank: 9,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Rufus T',
     points: '154',
   },
   {
     rank: 10,
-    course: 'Python-For-Beginners',
+    course: 'Fiber-optics',
     owner: 'Naveen Kumar M',
     points: '154',
   },
@@ -120,7 +118,7 @@ function Performance() {
             <p className='px-5 pt-5 text-2xl font-bold'>PERFORMANCE LEADERBOARD</p>
             <CardHeader>
               <div className='flex items-center justify-between gap-4'>
-                <CardTitle>Course Test Attended</CardTitle>
+                <CardTitle>Module Test Attended</CardTitle>
                 <CardTitle> View Leaderboard</CardTitle>
               </div>
             </CardHeader>
@@ -145,7 +143,7 @@ function Performance() {
         </div>
         <div>
           <Card>
-            <p className='px-5 pt-5 text-center text-2xl font-bold'>PYTHON FOR BEGINNERS</p>
+            <p className='px-5 pt-5 text-center text-2xl font-bold'>FIBER OPTICS</p>
             <div className='p-5'>
               <CardHeader>
                 <div className='flex items-center gap-4'>

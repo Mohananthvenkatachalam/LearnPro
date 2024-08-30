@@ -41,24 +41,24 @@ import { useAuth } from '@/contexts/AuthContext'
 
 const InfoMark = [
   {
-    label: 'Total Problems',
-    count: 567,
-    des: 'Total coding problems attended',
+    label: 'Total Lessons Completed',
+    count: 267,
+    des: 'Total lessons problems attended',
   },
   {
-    label: 'MCQ',
+    label: 'Total Test Attended',
     count: 108,
-    des: 'Overall MCQ attended',
+    des: 'Overall test attended',
   },
   {
-    label: 'Couses Enrolled',
+    label: 'Modules Enrolled',
     count: 25,
-    des: 'Count on couses enrolled for learning',
+    des: 'Count on modules enrolled for learning',
   },
   {
-    label: 'Couses Completed',
+    label: 'Modules Completed',
     count: 20,
-    des: 'Couses completed in the portal',
+    des: 'Modules completed in the portal',
   },
   {
     label: 'Projects',
@@ -137,12 +137,12 @@ const links = [
     icon: Users,
   },
   {
-    label: 'Courses',
+    label: 'Modules',
     href: '/courses',
     icon: GraduationCap,
   },
   {
-    label: 'Coding',
+    label: 'Meet',
     href: '/coding',
     icon: CodeXml,
   },
@@ -157,12 +157,17 @@ const links = [
     icon: School,
   },
   {
-    label: 'Lab Smith',
+    label: 'Virtual Lab',
     href: '/lab-smith',
     icon: FlaskConical,
   },
   {
     label: 'MCQ',
+    href: '/mcq',
+    icon: ListTodo,
+  },
+  {
+    label: 'Written Test',
     href: '/mcq',
     icon: ListTodo,
   },
