@@ -14,6 +14,8 @@ import UserLayout from '@/layouts/UserLayout'
 
 // Pages
 import Logout from '@/pages/auth/Logout'
+import CommonLayout from '@/layouts/CommonLayout'
+import { commonRoutes } from './common'
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,12 @@ const router = createBrowserRouter([
             path: '/admin',
             element: <AdminLayout />,
             children: adminRoutes,
+          },
+          {
+            /* Can be accessed by both the admin and user */
+            path: '/',
+            element: <CommonLayout />,
+            children: commonRoutes,
           },
         ],
       },

@@ -1,0 +1,3 @@
+[submodule "mumble2"]
+	path = app/mumble2
+	url = https://github.com/divanov11/mumble2.git
