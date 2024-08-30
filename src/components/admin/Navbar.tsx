@@ -21,7 +21,7 @@ const links = [
     to: '/admin/dashboard',
   },
   {
-    title: 'Courses',
+    title: 'Modules',
     to: '/admin/courses',
   },
   {
@@ -34,6 +34,10 @@ const links = [
   },
   {
     title: 'Analytics',
+    to: '/admin/analytics',
+  },
+  {
+    title: 'Infrastructure',
     to: '/admin/analytics',
   },
 ]

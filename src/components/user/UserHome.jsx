@@ -41,24 +41,24 @@ import { useAuth } from '@/contexts/AuthContext'
 
 const InfoMark = [
   {
-    label: 'Total Problems',
-    count: 567,
-    des: 'Total coding problems attended',
+    label: 'Total Lessons Completed',
+    count: 267,
+    des: 'Total lessons problems attended',
   },
   {
-    label: 'MCQ',
+    label: 'Total Test Attended',
     count: 108,
-    des: 'Overall MCQ attended',
+    des: 'Overall test attended',
   },
   {
-    label: 'Couses Enrolled',
+    label: 'Modules Enrolled',
     count: 25,
-    des: 'Count on couses enrolled for learning',
+    des: 'Count on modules enrolled for learning',
   },
   {
-    label: 'Couses Completed',
+    label: 'Modules Completed',
     count: 20,
-    des: 'Couses completed in the portal',
+    des: 'Modules completed in the portal',
   },
   {
     label: 'Projects',
@@ -68,58 +68,58 @@ const InfoMark = [
 ]
 const Groups = [
   {
-    name: 'DevConf-ReactJs-2024',
+    name: 'Khan Academy',
     email: 'alice.smith@example.com',
   },
   {
-    name: 'WebSummit-2024',
+    name: 'Bozeman Science',
     email: 'bob.jones@example.com',
   },
   {
-    name: 'CodeFest-ExpressJS',
+    name: 'The Organic Chemistry Tutor',
     email: 'charlie.brown@example.com',
   },
   {
-    name: 'MangoDB-LearnAt',
+    name: 'Math Antics',
     email: 'diana.ross@example.com',
   },
   {
-    name: 'JSWorld-ReactJs-2024',
+    name: 'CrashCourse',
     email: 'eva.green@example.com',
   },
   {
-    name: 'TechExpo-FullStack',
+    name: 'PatrickJMT',
     email: 'frank.wright@example.com',
   },
 ]
 const Status = [
   {
-    course: 'Learn-React',
+    course: 'Learn-Physics',
     owner: 'mohanV@gmail.com',
     percentage: '80',
   },
   {
-    course: 'Learn-React',
+    course: 'Learn-Chemistry',
     owner: 'mohanV@gmail.com',
     percentage: '50',
   },
   {
-    course: 'Master-Angular',
+    course: 'Master-Problems',
     owner: 'susanB@gmail.com',
     percentage: '60',
   },
   {
-    course: 'VueJS-Essentials',
+    course: 'Learn-Life Science',
     owner: 'davidK@gmail.com',
     percentage: '75',
   },
   {
-    course: 'NodeJS-Fundamentals',
+    course: 'Physics-Fundamentals',
     owner: 'janeD@gmail.com',
     percentage: '25',
   },
   {
-    course: 'Python-For-Beginners',
+    course: 'Botany',
     owner: 'alexT@gmail.com',
     percentage: '95',
   },
@@ -137,12 +137,12 @@ const links = [
     icon: Users,
   },
   {
-    label: 'Courses',
+    label: 'Modules',
     href: '/courses',
     icon: GraduationCap,
   },
   {
-    label: 'Coding',
+    label: 'Meet',
     href: '/coding',
     icon: CodeXml,
   },
@@ -157,12 +157,17 @@ const links = [
     icon: School,
   },
   {
-    label: 'Lab Smith',
+    label: 'Virtual Lab',
     href: '/lab-smith',
     icon: FlaskConical,
   },
   {
     label: 'MCQ',
+    href: '/mcq',
+    icon: ListTodo,
+  },
+  {
+    label: 'Written Test',
     href: '/mcq',
     icon: ListTodo,
   },
@@ -184,20 +189,18 @@ function UserHome() {
           <CardHeader className='pb-3'>
             <CardTitle className='mb-3 text-3xl font-bold'>{user?.fullname}</CardTitle>
             <CardDescription className='space-x-2 leading-relaxed'>
-              As a Full Stack Developer, you specialize in designing and implementing robust web
-              applications. You excel in both front-end and back-end technologies, ensuring seamless
-              user experiences and efficient server-side operations. Your expertise includes a
-              diverse range of tools and frameworks, allowing you to build dynamic and responsive
-              applications.
+            Educational resources for school students are designed to support academic growth 
+            and prepare students for higher education or future careers. 
+            These resources cover a broad range of subjects, including science related subjects and social studies, and 
+            are tailored to the curriculum and exam requirements for these grade levels.
             </CardDescription>
             <div className='flex justify-between py-3'>
               <div className='space-y-2'>
                 <p>
-                  <span className='font-semibold'>Degree: </span>B.Tech Information Technology
+                  <span className='font-semibold'>Grade </span>10th Grade
                 </p>
                 <p>
-                  <span className='font-semibold'>College: </span>Sri Krishna College of Engineering
-                  and Technology
+                  <span className='font-semibold'>School: </span>Sri Shakthi Matriculation Higher Secondary School
                 </p>
               </div>
               <div className='flex flex-col items-center gap-2'>
