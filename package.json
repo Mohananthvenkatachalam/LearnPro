@@ -6,7 +6,7 @@
   "scripts": {
     "client": "vite",
     "dev": "concurrently -k -c auto -n client,spring,server,webapp npm:client npm:dev:java npm:dev:server npm:dev:apps",
-    "dev:java": "cd server/springboot-server && ./gradlew bootRun",
+    "dev:java": "cd server/springboot-server && gradlew bootRun",
     "dev:server": "cd server/express-server && npm run dev",
     "dev:apps": "cd apps && npm run dev",
     "build": "tsc -b && vite build",
