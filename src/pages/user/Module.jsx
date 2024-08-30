@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import React, { useState } from 'react'
 
 const Module = () => {
@@ -50,12 +51,21 @@ const Module = () => {
   ]
 
   return (
-    <div className='container m-5 p-5'>
-      <div className='grid grid-cols-5'>
-        <div className='col-span-2 overflow-x-auto'>
+    <div className='container mx-auto h-screen p-5'>
+      <div className='mb-5'>
+        <h1 className='text-3xl font-bold'>Welcome to the Interactive Learning Module!</h1>
+        <p className='mt-2 text-lg'>
+          Dive into our engaging lessons and interactive tests. Click on a lesson to start learning
+          and watch the video in full screen. Let's make learning fun and exciting!
+        </p>
+      </div>
+      <div className='grid h-[calc(100vh-100px)] grid-cols-5 gap-4'>
+        {/* This sets the height of the grid to occupy the full viewport minus the header */}
+        <div className='col-span-2 h-full overflow-y-auto'>
+          {/* This ensures the column can scroll if content overflows */}
           <h2 className='text-2xl font-bold'>Contents</h2>
           {days.map((day) => (
-            <div key={day.id} className='my-3'>
+            <Card key={day.id} className='my-3 mr-10'>
               <Button
                 variant={'ghost'}
                 className={`my-4 cursor-pointer text-lg hover:text-blue-500 ${selectedDay === day.id && 'text-blue-500'}`}
@@ -68,21 +78,22 @@ const Module = () => {
                   <Button
                     variant={'outline'}
                     onClick={() => handleLearn(day.link)}
-                    className='my-0 py-0'
+                    className='my-4 py-0'
                   >
                     Lesson
                   </Button>
-                  <Button variant={'outline'} className='my-0 py-0'>
+                  <Button variant={'outline'} className='my-4 py-0'>
                     Test
                   </Button>
                 </div>
               )}
-            </div>
+            </Card>
           ))}
         </div>
         <div className='col-span-3'>
+          {/* Setting a fixed height ensures the iframe does not change height */}
           <iframe
-            className='h-full w-full'
+            className='h-4/5 w-full'
             src={frameSrc}
             title='YouTube video player'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
