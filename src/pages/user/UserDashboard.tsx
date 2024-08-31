@@ -9,6 +9,9 @@ import ResumeAnalysis from './ResumeAnalysis'
 import Settings from './Settings'
 import DataAnalytics from './DataAnalytics'
 import Resources from './EduResource'
+import { Button } from '@/components/ui/button'
+import Meet from './Meet'
+import LabSmith from './lab-smith'
 
 export default function Dashboard() {
   return (
@@ -21,11 +24,12 @@ export default function Dashboard() {
             <TabsTrigger value='performance'>Performance</TabsTrigger>
             <TabsTrigger value='hackathons'>Competition</TabsTrigger>
             <TabsTrigger value='mcq'>Test</TabsTrigger>
-            <TabsTrigger value='profile'>Profile</TabsTrigger>
             <TabsTrigger value='infra'>Infrastructure Analysis</TabsTrigger>
-            <TabsTrigger value='resume'>Skill Analysis</TabsTrigger>
+            <TabsTrigger value='lab'>Virtual Lab</TabsTrigger>
+            <TabsTrigger value='meet'>Virtual Meet</TabsTrigger>
             <TabsTrigger value='education'>Educational Resources</TabsTrigger>
             <TabsTrigger value='settings'>Settings</TabsTrigger>
+            <TabsTrigger value='profile'>Profile</TabsTrigger>
           </TabsList>
 
           <TabsContent value='home'>
@@ -57,6 +61,12 @@ export default function Dashboard() {
           </TabsContent>
           <TabsContent value='settings'>
             <Settings />
+          </TabsContent>
+          <TabsContent value='meet'>
+            <Meet/>
+          </TabsContent>
+          <TabsContent value='lab'>
+            <LabSmith/>
           </TabsContent>
         </Tabs>
       </main>

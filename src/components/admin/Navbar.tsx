@@ -40,6 +40,10 @@ const links = [
     title: 'Infrastructure',
     to: '/admin/analytics',
   },
+  {
+    title: 'Manage Student',
+    to: '/admin/analytics',
+  },
 ]
 
 const Navbar = () => {
@@ -53,7 +57,7 @@ const Navbar = () => {
           className='flex items-center gap-2 text-lg font-semibold md:text-base'
         >
           <Package2 className='h-6 w-6' />
-          <span className='sr-only'>CollegePro</span>
+          <span className='sr-only'>LearnPro</span>
         </Link>
         {links.map((link, index) => (
           <Link
@@ -76,7 +80,7 @@ const Navbar = () => {
           <nav className='grid gap-6 text-lg font-medium'>
             <Link to='#' className='flex items-center gap-2 text-lg font-semibold'>
               <Package2 className='h-6 w-6' />
-              <span className='sr-only'>CollegePro</span>
+              <span className='sr-only'>LearnPro</span>
             </Link>
             {links.map((link, index) => (
               <Link

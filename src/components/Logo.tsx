@@ -27,8 +27,7 @@ type LogoTextProps = {
 export const LogoWithText: React.FC<LogoTextProps> = ({ className, logoClassName }) => {
   return (
     <div className={cn('flex items-center text-lg font-medium', className)}>
-      <Logo className={logoClassName} />
-      <span>ollegePro</span>
+      <img className='w-36' src="../../public/navLogo.png" alt=""/>
     </div>
   )
 }
