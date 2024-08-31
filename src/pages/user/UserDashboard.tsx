@@ -7,6 +7,7 @@ import HackathonPage from './HackathonPage'
 import Mcq from './Mcq'
 import ResumeAnalysis from './ResumeAnalysis'
 import Settings from './Settings'
+import DataAnalytics from './DataAnalytics'
 
 export default function Dashboard() {
   return (
@@ -20,6 +21,7 @@ export default function Dashboard() {
             <TabsTrigger value='hackathons'>Competition</TabsTrigger>
             <TabsTrigger value='mcq'>Test</TabsTrigger>
             <TabsTrigger value='profile'>Profile</TabsTrigger>
+            <TabsTrigger value='infra'>Infrastructure Analysis</TabsTrigger>
             <TabsTrigger value='resume'>Skill Analysis</TabsTrigger>
             <TabsTrigger value='settings'>Settings</TabsTrigger>
           </TabsList>
@@ -42,6 +44,9 @@ export default function Dashboard() {
           <TabsContent value='hackathons'>
             <HackathonPage />
           </TabsContent>
+          <TabsContent value='infra'>
+            <DataAnalytics/>
+            </TabsContent>
           <TabsContent value='resume'>
             <ResumeAnalysis />
             </TabsContent>
