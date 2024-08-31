@@ -17,6 +17,7 @@ function Mcq() {
       try {
         const response = await axios.get('http://localhost:8080/api/gateway/get-all-quiz')
         setQuizDetails(response.data)
+        console.log(selectedQuizId)
       } catch (error) {
         console.log(error)
       }
@@ -35,7 +36,9 @@ function Mcq() {
 
   return (
     <div>
-      <div className={`px-[30px] py-[40px] transition-all duration-300 ${isBackgroundBlurred ? 'blur-md' : ''}`}>
+      <div
+        className={`px-[30px] py-[40px] transition-all duration-300 ${isBackgroundBlurred ? 'blur-md' : ''}`}
+      >
         <p className='mb-2 text-[20px] font-semibold'>MCQ Test</p>
         <p>The MCQ test for your students to test their skills</p>
 
@@ -91,7 +94,10 @@ function Mcq() {
                           {item.total_attended_count}
                         </td>
                         <td className='max-w-xs whitespace-nowrap px-4'>
-                          <Button className='px-4 text-[12px]' onClick={() => setSelectedQuizId(item.id)}>
+                          <Button
+                            className='px-4 text-[12px]'
+                            onClick={() => setSelectedQuizId(item.id)}
+                          >
                             Take Test
                           </Button>
                         </td>
@@ -103,8 +109,12 @@ function Mcq() {
             </div>
           </div>
         ) : (
-          <div className='flex flex-col items-center justify-center min-h-[50vh]'>
-            <img src='https://img.icons8.com/?size=100&id=49IJ6AikRhX9&format=png&color=000000' alt='Start Icon' className='w-[50px] h-[50px] mb-4' />
+          <div className='flex min-h-[50vh] flex-col items-center justify-center'>
+            <img
+              src='https://img.icons8.com/?size=100&id=49IJ6AikRhX9&format=png&color=000000'
+              alt='Start Icon'
+              className='mb-4 h-[50px] w-[50px]'
+            />
             <h2 className='mb-4 text-[24px] font-semibold'>Start the Test</h2>
             <Button onClick={handleStartTest} className='px-6 py-3 text-[16px] font-bold'>
               Start Test
@@ -115,8 +125,8 @@ function Mcq() {
 
       {/* This div is used to keep elements like button and text outside of blur effect */}
       {isBackgroundBlurred && (
-        <div className="fixed inset-0 flex items-center justify-center bg-transparent">
-          <h1 className="text-black text-3xl font-bold">Starting Test...</h1>
+        <div className='fixed inset-0 flex items-center justify-center bg-transparent'>
+          <h1 className='text-3xl font-bold text-black'>Starting Test...</h1>
         </div>
       )}
     </div>

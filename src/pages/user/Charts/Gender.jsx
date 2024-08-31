@@ -1,94 +1,70 @@
-// GenderPercentageBarChart.js
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
-  BarElement,
   CategoryScale,
   LinearScale,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels'
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend)
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartDataLabels)
 
-const GenderPercentageBarChart = () => {
+const GenderChart = () => {
   const data = {
-    title: 'Percentage of teachers by gender, all India',
-    subtitle: '2018-19 to 2021-22',
-    xAxis: ['2018-19', '2019-20', '2020-21', '2021-22'],
-    yAxisTitle: 'Percentage',
-    series: [
+    labels: ['2018-19', '2019-20', '2020-21', '2021-22'],
+    datasets: [
       {
-        name: 'Male',
+        label: 'Male',
         data: [50.01, 49.25, 48.97, 48.7],
+        backgroundColor: '#00bfff',
       },
       {
-        name: 'Female',
+        label: 'Female',
         data: [49.99, 50.75, 51.03, 51.3],
+        backgroundColor: '#ff69b4',
       },
     ],
   }
 
-  const chartData = {
-    labels: data.xAxis,
-    datasets: data.series.map((serie) => ({
-      label: serie.name,
-      data: serie.data,
-      backgroundColor:
-        serie.name === 'Male' ? 'rgba(54, 162, 235, 0.5)' : 'rgba(255, 99, 132, 0.5)',
-      borderColor: serie.name === 'Male' ? 'rgba(54, 162, 235, 1)' : 'rgba(255, 99, 132, 1)',
-      borderWidth: 1,
-    })),
-  }
-
   const options = {
-    responsive: true,
     plugins: {
       title: {
         display: true,
-        text: data.title,
-      },
-      subtitle: {
-        display: true,
-        text: data.subtitle,
+        text: 'Percentage of teachers by gender, all India 2018-19 to 2021-22',
       },
       legend: {
-        position: 'top',
+        position: 'right',
       },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem) {
-            return `${tooltipItem.dataset.label}: ${tooltipItem.raw.toFixed(2)}%`
-          },
-        },
+      datalabels: {
+        display: true,
+        color: 'black',
+        anchor: 'center',
+        align: 'center',
+        formatter: (value) => value.toFixed(2) + '%',
       },
     },
     scales: {
       x: {
         stacked: true,
-        title: {
-          display: true,
-          text: 'Year',
-        },
       },
       y: {
         stacked: true,
-        title: {
-          display: true,
-          text: data.yAxisTitle,
-        },
+        beginAtZero: true,
+        max: 100,
         ticks: {
           callback: function (value) {
-            return `${value.toFixed(2)}%`
+            return value + '%'
           },
         },
       },
     },
   }
 
-  return <Bar data={chartData} options={options} />
+  return <Bar data={data} options={options} height={200} />
 }
 
-export default GenderPercentageBarChart
+export default GenderChart

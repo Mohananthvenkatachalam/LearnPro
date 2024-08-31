@@ -57,6 +57,9 @@ const BarChart = () => {
           },
         },
       },
+      datalabels: {
+        display: false, // Ensure no data labels are displayed
+      },
     },
     scales: {
       x: {
@@ -74,7 +77,7 @@ const BarChart = () => {
     },
   }
 
-  return <Bar data={data} options={options} />
+  return <Bar data={data} options={options} height={250} />
 }
 
 export default BarChart
