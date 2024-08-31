@@ -1,0 +1,15 @@
+{
+  "name": "learnhub-apps",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently --raw npm:mumble2",
+    "mumble2": "cd mumble2 && npx vite . --port 5174"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
