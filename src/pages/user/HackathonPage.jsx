@@ -67,37 +67,37 @@ export default function HackathonPage() {
     setActiveSort(sortType)
   }
 
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState(competition)
   const [totPage, setTotPage] = useState(1)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      axios
-        .get('http://localhost:8080/hackathons?page=' + page)
-        .then((res) => {
-          console.log(res.data)
-          setItems(res.data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    }
-    fetchData()
-  }, [page])
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     axios
+  //       .get('http://localhost:8080/hackathons?page=' + page)
+  //       .then((res) => {
+  //         console.log(res.data)
+  //         setItems(res.data)
+  //       })
+  //       .catch((err) => {
+  //         console.log(err)
+  //       })
+  //   }
+  //   fetchData()
+  // }, [page])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      axios
-        .get('http://localhost:8080/hackathons?page=1')
-        .then((res) => {
-          setItems(res.data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    }
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     axios
+  //       .get('http://localhost:8080/hackathons?page=1')
+  //       .then((res) => {
+  //         setItems(res.data)
+  //       })
+  //       .catch((err) => {
+  //         console.log(err)
+  //       })
+  //   }
+  //   fetchData()
+  // }, [])
   const navigate = useNavigate()
   const handleClick = (item) => {
     window.open(item.submission_gallery_url, '_blank')
