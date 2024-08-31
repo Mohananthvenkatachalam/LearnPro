@@ -15,6 +15,7 @@ import {
 import { Card } from '@/components/ui/card'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { competions } from '@/constants/competitionsData'
 
 export default function HackathonPage() {
   const [filterCounter, setFilterCounter] = useState(0)
@@ -67,7 +68,7 @@ export default function HackathonPage() {
     setActiveSort(sortType)
   }
 
-  const [items, setItems] = useState(competition)
+  const items = competions
   const [totPage, setTotPage] = useState(1)
 
   // useEffect(() => {
