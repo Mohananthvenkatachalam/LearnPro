@@ -2,6 +2,7 @@ import { levels } from '@/constants/moduleData'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Module from './Module'
+import ChatBot from './Chatbot'
 
 const UserCoursePage = () => {
   return (
