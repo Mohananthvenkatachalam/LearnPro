@@ -113,7 +113,7 @@ export function Sidebar({ isCollapsed }: SidebarProps) {
           ) : (
             <Button variant='outline' size='sm' className='w-full justify-start'>
               <SparkleIcon className='size-4 fill-inherit' />
-              <span className='ml-2'>CollegePro</span>
+              <span className='ml-2'>LearnPro</span>
             </Button>
           )}
         </Link>
