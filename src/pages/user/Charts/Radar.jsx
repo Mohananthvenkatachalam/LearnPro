@@ -50,6 +50,9 @@ const RadarChart = () => {
           },
         },
       },
+      datalabels: {
+        display: false, // Ensure no data labels are displayed
+      },
     },
     scales: {
       r: {

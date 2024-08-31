@@ -18,6 +18,7 @@ import GirlsEnrollmentChart from './Charts/GirlsEnroll'
 import GenderPercentageBarChart from './Charts/Gender'
 import PieChart from './Charts/Across'
 import BarChart from './Charts/Bar'
+import GenderChart from './Charts/Gender'
 
 ChartJS.register(
   CategoryScale,
@@ -139,6 +140,12 @@ const FacilityChart = () => {
         display: true,
         text: 'School Facilities Over the Years (2019-20 vs 2020-21)',
       },
+      tooltip: {
+        enabled: false,
+      },
+      datalabels: {
+        display: false,
+      },
     },
     scales: {
       x: {
@@ -218,6 +225,12 @@ const FacilityCharts = () => {
         display: true,
         text: 'School Facilities Over the Years',
       },
+      tooltip: {
+        enabled: false, // Disable tooltips completely
+      },
+      datalabels: {
+        display: false, // Ensure no data labels are displayed
+      },
     },
     scales: {
       x: {
@@ -232,7 +245,7 @@ const FacilityCharts = () => {
 
   return (
     <div className='mx-auto w-full max-w-6xl p-4'>
-      <Bar data={data} options={options} />
+      <Bar data={data} options={options} height={200} />
     </div>
   )
 }
@@ -240,60 +253,55 @@ function DataAnalytics() {
   return (
     <div>
       <h1 className='mb-5 text-center text-3xl font-bold'>Data Analytics For Schools</h1>
-      <div className='grid grid-cols-1 gap-8 md:grid-cols-4'>
-        <div className='col-span-4'>
-          <Card>
-            <EnrollmentChart />
-          </Card>
-        </div>
-        <div className='col-span-4'>
-          <Card>
-            <FacilityChart />
-          </Card>
-        </div>
-        <div className='col-span-2'>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+        {/* Each Card will occupy one column in a 2-column layout */}
+        <div className='col-span-1'>
           <Card>
             <PieChart />
           </Card>
         </div>
-        <div className='col-span-2'>
+        <div className='col-span-1'>
           <Card>
-            <GenderPercentageChart />
+            <GenderChart />
           </Card>
         </div>
-        <div className='col-span-2'>
+        <div className='mt-4'>
           <Card>
             <FacilityCharts />
           </Card>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-1'>
           <Card>
             <Enroll />
           </Card>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-1'>
           <Card>
             <GirlsEnrollmentChart />
           </Card>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-1'>
           <Card>
             <GenderPercentageBarChart />
           </Card>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-1'>
           <Card>
             <PieChart />
           </Card>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-1'>
           <Card>
             <BarChart />
+          </Card>
+        </div>
+        <div className='col-span-2'>
+          <Card>
+            <FacilityChart />
           </Card>
         </div>
       </div>
     </div>
   )
 }
-
 export default DataAnalytics

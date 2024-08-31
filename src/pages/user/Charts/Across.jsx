@@ -53,16 +53,28 @@ const PieChart = () => {
         text: 'Distribution of Education Categories (2020-21)',
       },
       tooltip: {
+        enabled: false,
         callbacks: {
           label: function (tooltipItem) {
             return `${tooltipItem.label}: ${tooltipItem.raw}`
           },
         },
       },
+      // legend: {
+      //   display: false, // Hide legend labels
+      // },
+      datalabels: {
+        display: false, // Ensure no data labels are displayed
+      },
     },
   }
 
-  return <Pie data={data} options={options} />
+  // Using a wrapper div to control the size of the Pie Chart
+  return (
+    <div style={{ width: '500px', height: '500px', margin: '0 auto' }}>
+      <Pie data={data} options={options} />
+    </div>
+  )
 }
 
 export default PieChart
