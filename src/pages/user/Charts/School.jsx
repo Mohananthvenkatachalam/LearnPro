@@ -63,6 +63,12 @@ const GenderPercentageChart = () => {
             return `${tooltipItem.dataset.label}: ${tooltipItem.raw.toFixed(2)}%`
           },
         },
+        datalabels: {
+          display: false, // Ensure no data labels are displayed
+        },
+        tooltip: {
+          enabled: false, // Disable tooltips completely
+        },
       },
     },
     scales: {
