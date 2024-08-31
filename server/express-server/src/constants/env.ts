@@ -21,7 +21,6 @@ export const SQL_USERNAME = process.env.SQL_USERNAME!;
 export const SQL_PASSWORD = process.env.SQL_PASSWORD!;
 export const DATABASE_NAME = process.env.DATABASE_NAME!;
 
-
 // OPEN API
 export const OPENAI_API_KEY = process.env.OPENAI_API_KEY!;
 
@@ -36,7 +35,7 @@ const requiredEnvVariables = [
   'SQL_USERNAME',
   'SQL_PASSWORD',
   'DATABASE_NAME',
-  'OPENAI_API_KEY'
+  'OPENAI_API_KEY',
 ];
 
 requiredEnvVariables.forEach(env => {

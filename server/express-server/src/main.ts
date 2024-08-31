@@ -6,6 +6,7 @@ import adminAuthRoute from './routes/api/auth/admin';
 import userAuthRoute from './routes/api/auth/user';
 import openAIRoute from './routes/api/openai';
 import resumeAnalysisRoute from './routes/api/resumeAnalysis';
+import chatRoute from './routes/api/auth/chatbot';
 
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import { PORT } from './constants/env';
@@ -31,6 +32,7 @@ app.use(express.json());
 app.use('/api/auth/admin', adminAuthRoute);
 app.use('/api/auth/user', userAuthRoute);
 app.use('/resume-analysis', resumeAnalysisRoute);
+app.use('/api/chatbot', chatRoute);
 app.use('/api/', openAIRoute);
 
 // Proxy configuration

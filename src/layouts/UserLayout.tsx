@@ -5,6 +5,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { CircularSpinner } from '@/components/ui/spinner'
 import { useAuth } from '@/contexts/AuthContext'
 import { toast } from 'sonner'
+import ChatBot from '@/pages/user/Chatbot'
 
 const UserLayout = () => {
   const { isAuthenticated, isAdmin } = useAuth()
@@ -39,6 +40,7 @@ const UserLayout = () => {
           }
         >
           <Outlet /> {/* This is where the child routes will be rendered */}
+          <ChatBot />
         </React.Suspense>
       </div>
     </div>
