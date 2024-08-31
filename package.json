@@ -38,6 +38,7 @@
     "agora-rtc-react": "^2.3.0",
     "agora-rtc-sdk-ng": "^4.22.0",
     "axios": "^1.7.5",
+    "chart.js": "^4.4.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "flexlayout-react": "^0.7.15",
@@ -48,6 +49,7 @@
     "openai": "^4.57.0",
     "react": "^18.3.1",
     "react-calendar-heatmap": "^1.9.0",
+    "react-chartjs-2": "^5.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
@@ -90,5 +92,10 @@
     "tailwindcss": "^3.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
-  }
+  },
+  "description": "Welcome to LearnPro! It is a web application that is designed to help students in college. It is a platform where students can share notes, ask questions, and help each other out. It is a great way to collaborate with other students and learn from each other.",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
